@@ -1,0 +1,11 @@
+本目录用以方便添加执行各种命令的脚本，如有需要，请自行添加脚本文件，并在README中注明脚本文件的功能
+
+auto_startup文件用于开机启动，需复制到 /etc/init.d/ 路径下；
+脚本复制完毕需要在 /etc/rcX.d/目录（X代表启动级别，启动级别一般为0~5）中建立软链接指向 /etc/init.d/中的启动脚本
+命令如下：
+ln -s /etc/init.d/auto_startup /etc/rc3.d/S99auto_startup
+ln -s /etc/init.d/auto_startup /etc/rc5.d/S99auto_startup
+rc3 代表以命令行模式启动
+rc5 代表以图形化模式启动
+S99auto_startup中的 S代表 START，后面的数字代表启动顺序，与/etc/init.d/中的启动脚本中的启动顺序对应。
+
