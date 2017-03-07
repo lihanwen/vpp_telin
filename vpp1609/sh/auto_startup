@@ -1,8 +1,0 @@
-#!/bin/bash
-START=99
-STOP=15
-
-#重定向启动 -d 表示将debug信息输入到 /tmp/vpp_debug 中；-n 表示已前台模式运行;
-#portal_red 是发送重定向报文的可执行程序
-portal_red -d > /tmp/portal_red.log 2>&1 &
-
